@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public static PlayerControl Instance { get; private set; }
     public float speed;
     Rigidbody2D playerbody;
     private Vector2 lastDirection;
-
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         playerbody = GetComponent<Rigidbody2D>();
@@ -30,5 +34,9 @@ public class PlayerControl : MonoBehaviour
     void Attack()
     {
         print("attacked" + lastDirection);
+    }
+    public Transform GetPlayerTransform()
+    {
+        return transform;
     }
 }
