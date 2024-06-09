@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:Assets/Sprites/FB/B500-2.PNG.meta
-guid: 3acec2e00d9488a46955d9a5b37a21da
-========
-guid: 1329cc5588778d14b82fa2cec1bdb310
->>>>>>>> Stashed changes:Assets/Art/VFX/Attacks/IceAttack/IceAttackStart.png.meta
+guid: fbb2404a682b5c448b4aa8ded33a4454
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,11 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< Updated upstream:Assets/Sprites/FB/B500-2.PNG.meta
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-========
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -119,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IceAttackStart_0
+      name: IceAttackHit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fcfc08c8c5c3c740a6a4b9bb8b71907
-      internalID: -48480627
+      spriteID: 7b25253ed277813438c6f02d763f7247
+      internalID: -694997842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IceAttackStart_1
+      name: IceAttackHit_1
       rect:
         serializedVersion: 2
         x: 48
@@ -154,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 415e33449d41ca54d9ad9c7780972318
-      internalID: -606531876
+      spriteID: 6d84bcdd61aa00f409c2442a818fd42a
+      internalID: -2045038528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IceAttackStart_2
+      name: IceAttackHit_2
       rect:
         serializedVersion: 2
         x: 96
@@ -175,13 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c58659e32292d784eb1444077bf9cb18
-      internalID: -799467681
+      spriteID: 20620ef729c92a4429037b2bc5ec7a4d
+      internalID: -1869815186
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>>> Stashed changes:Assets/Art/VFX/Attacks/IceAttack/IceAttackStart.png.meta
+    - serializedVersion: 2
+      name: IceAttackHit_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ace06ab953481d428da9fe426f26c8b
+      internalID: -817943238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAttackHit_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c527ef3210043bb4a8e608f6ba27da0f
+      internalID: 467215052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAttackHit_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581ceed3619cad74e9eed6e7e3101b0c
+      internalID: -469829041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceAttackHit_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2b58e68b83991498f6af47a8b70344
+      internalID: -1001660626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -192,14 +266,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<<< Updated upstream:Assets/Sprites/FB/B500-2.PNG.meta
-    nameFileIdTable: {}
-========
     nameFileIdTable:
-      IceAttackStart_0: -48480627
-      IceAttackStart_1: -606531876
-      IceAttackStart_2: -799467681
->>>>>>>> Stashed changes:Assets/Art/VFX/Attacks/IceAttack/IceAttackStart.png.meta
+      IceAttackHit_0: -694997842
+      IceAttackHit_1: -2045038528
+      IceAttackHit_2: -1869815186
+      IceAttackHit_3: -817943238
+      IceAttackHit_4: 467215052
+      IceAttackHit_5: -469829041
+      IceAttackHit_6: -1001660626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

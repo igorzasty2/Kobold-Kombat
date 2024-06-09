@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< Updated upstream:Assets/Sprites/FB/B500-2.PNG.meta
-guid: 3acec2e00d9488a46955d9a5b37a21da
-========
-guid: 1329cc5588778d14b82fa2cec1bdb310
->>>>>>>> Stashed changes:Assets/Art/VFX/Attacks/IceAttack/IceAttackStart.png.meta
+guid: 749551ce280a912409171e65d83f4ca8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,11 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< Updated upstream:Assets/Sprites/FB/B500-2.PNG.meta
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-========
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -119,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IceAttackStart_0
+      name: Dash_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fcfc08c8c5c3c740a6a4b9bb8b71907
-      internalID: -48480627
+      spriteID: 4d173098e33bf44449b5ab24a8bdd536
+      internalID: 690902884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IceAttackStart_1
+      name: Dash_1
       rect:
         serializedVersion: 2
         x: 48
@@ -154,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 415e33449d41ca54d9ad9c7780972318
-      internalID: -606531876
+      spriteID: 6716be2fb9628504f961e165d7d2dcfd
+      internalID: 1523155547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: IceAttackStart_2
+      name: Dash_2
       rect:
         serializedVersion: 2
         x: 96
@@ -175,13 +166,117 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c58659e32292d784eb1444077bf9cb18
-      internalID: -799467681
+      spriteID: 19848ea92b257ba45814f3a36d367c87
+      internalID: -1956046920
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>>> Stashed changes:Assets/Art/VFX/Attacks/IceAttack/IceAttackStart.png.meta
+    - serializedVersion: 2
+      name: Dash_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c612c597dece1242b1be71593aaac85
+      internalID: 1122636284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7de384f209a42c4da2a51dfccdb9f15
+      internalID: -1476328749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d38aed0d36d3742af606b5be562487
+      internalID: 1916981780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752d1c03dec65014ba431cf857e20bd0
+      internalID: 887250516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e99b6fad1b21884eaae156c776662c5
+      internalID: 2143014075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -192,14 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<<< Updated upstream:Assets/Sprites/FB/B500-2.PNG.meta
-    nameFileIdTable: {}
-========
     nameFileIdTable:
-      IceAttackStart_0: -48480627
-      IceAttackStart_1: -606531876
-      IceAttackStart_2: -799467681
->>>>>>>> Stashed changes:Assets/Art/VFX/Attacks/IceAttack/IceAttackStart.png.meta
+      Dash_0: 690902884
+      Dash_1: 1523155547
+      Dash_2: -1956046920
+      Dash_3: 1122636284
+      Dash_4: -1476328749
+      Dash_5: 1916981780
+      Dash_6: 887250516
+      Dash_7: 2143014075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
