@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float timeToDestroyObjectAfterDeath;
     protected Transform playerTransform;
     protected Rigidbody2D enemyRigidbody;
+    Collider2D enemyCollider;
     protected float attackCooldown;
     bool isAttackAnimationFinished;
     bool isHurtAnimationFinished;
@@ -46,6 +47,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
+        enemyCollider = GetComponent<Collider2D>();
         state = State.Idle;
     }
     protected virtual void Start()
@@ -212,7 +214,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject, timeToDestroyObjectAfterDeath);
     }
-    protected virtual void EnemyHit(float damage)
+    public virtual void Damage(float damage)
     {
         if (state != State.Dead)
         {
@@ -234,6 +236,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 state = State.Dead;
+                enemyCollider.enabled = false;
                 OnStateChanged?.Invoke(this, new OnStateChangedEventArgs(state));
             }
             if(!canNotBeStunned)

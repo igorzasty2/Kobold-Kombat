@@ -233,7 +233,7 @@ public class GhoulBoss : MeleeEnemy
         canDashSecondTime = false;
     }
 
-    protected override void EnemyHit(float damage)
+    public override void Damage(float damage)
     {
         if(unstaggerable)
         {
@@ -247,7 +247,7 @@ public class GhoulBoss : MeleeEnemy
         canDashSecondTime = false;
         attackVariant = GhoulAttackVariant.Basic;
         ghoulBossState = GhoulBossState.None;
-        base.EnemyHit(damage);
+        base.Damage(damage);
     }
     protected override void Attack()
     {

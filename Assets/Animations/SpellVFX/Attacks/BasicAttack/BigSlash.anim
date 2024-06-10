@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack
+  m_Name: BigSlash
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,15 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -137906874, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
+      value: {fileID: -908288035, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
     - time: 0.083333336
-      value: {fileID: 134539685, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
+      value: {fileID: -41884889, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
     - time: 0.16666667
-      value: {fileID: -447648131, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
+      value: {fileID: 1483569438, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
     - time: 0.25
-      value: {fileID: -1213177822, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
+      value: {fileID: 1275909107, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
     - time: 0.33333334
-      value: {fileID: 1202563621, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
+      value: {fileID: 2048470365, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -52,11 +52,11 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -137906874, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
-    - {fileID: 134539685, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
-    - {fileID: -447648131, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
-    - {fileID: -1213177822, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
-    - {fileID: 1202563621, guid: 67cca2cb8090fff4d903871fb35db083, type: 3}
+    - {fileID: -908288035, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
+    - {fileID: -41884889, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
+    - {fileID: 1483569438, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
+    - {fileID: 1275909107, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
+    - {fileID: 2048470365, guid: 47468a35d3e186440884e2a63f3a9fba, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -83,7 +83,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.41666666
-    functionName: OnAttackFinished
+    functionName: DestroySelf
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
