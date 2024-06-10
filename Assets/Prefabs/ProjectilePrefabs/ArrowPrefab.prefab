@@ -55,6 +55,7 @@ MonoBehaviour:
     m_Bits: 8
   speed: 5
   projectileVisual: {fileID: 1070866856383764578}
+  damage: 7
 --- !u!50 &7204775713894851641
 Rigidbody2D:
   serializedVersion: 4

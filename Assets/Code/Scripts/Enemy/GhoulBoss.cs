@@ -233,7 +233,7 @@ public class GhoulBoss : MeleeEnemy
         canDashSecondTime = false;
     }
 
-    public override void Damage(float damage)
+    public override void Damage(int damage)
     {
         if(unstaggerable)
         {

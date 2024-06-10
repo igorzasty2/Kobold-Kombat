@@ -8,7 +8,7 @@ public class SpellProjectile : MonoBehaviour
     LayerMask hitLayerMask;
     LayerMask wallLayerMask;
     [SerializeField] float speed;
-    [SerializeField] float damage;
+    [SerializeField] int damage;
     Vector2 startPosition;
     Vector2 lookingDirection;
     bool crossedMaxDistance;

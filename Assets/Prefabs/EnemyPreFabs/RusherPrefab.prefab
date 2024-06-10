@@ -183,11 +183,11 @@ MonoBehaviour:
   enemyVisual: {fileID: 801383572187373321}
   knockBackForce: 15
   health: 100
-  damage: 30
   canNotBeStunned: 0
   timeToDestroyObjectAfterDeath: 0
   distanceHitboxFromEnemy: 0.3
   radiusOfHitbox: 0.5
+  damage: 5
 --- !u!50 &6162005445588277289
 Rigidbody2D:
   serializedVersion: 4

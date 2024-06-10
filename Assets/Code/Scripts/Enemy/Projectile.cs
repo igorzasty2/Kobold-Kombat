@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] LayerMask wallLayerMask;
     [SerializeField] float speed;
     [SerializeField] ProjectileVisual projectileVisual;
+    [SerializeField] int damage;
     Vector2 startPosition;
     Vector2 lookingDirection;
     bool crossedMaxDistance;
@@ -50,6 +51,11 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         LayerMask colliderLayerMask = GetLayerMask(collision.gameObject.layer);
+        if (colliderLayerMask == playerLayerMask)
+        {
+            PlayerControl player = collision.GetComponent<PlayerControl>();
+            player.Damage(damage);
+        }
         if (colliderLayerMask == playerLayerMask || colliderLayerMask == wallLayerMask)
         {
             OnDestroy?.Invoke();

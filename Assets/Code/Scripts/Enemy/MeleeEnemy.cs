@@ -6,12 +6,15 @@ public class MeleeEnemy : Enemy
 {
     [SerializeField] protected float distanceHitboxFromEnemy;
     [SerializeField] protected float radiusOfHitbox;
+    [SerializeField] protected int damage;
     protected override void Attack()
     {
         Vector2 hitboxPos = transform.position + (playerTransform.position - transform.position).normalized * distanceHitboxFromEnemy;
-        if (Physics2D.OverlapCircle(hitboxPos, radiusOfHitbox, playerLayerMask) != null)
+        Collider2D collider = Physics2D.OverlapCircle(hitboxPos, radiusOfHitbox, playerLayerMask);
+        if (collider != null)
         {
-            Debug.Log($"Gracz zaatakowany! przez {gameObject.name}");
+            PlayerControl player = collider.GetComponent<PlayerControl>();
+            player.Damage(damage);
         }
     }
 }

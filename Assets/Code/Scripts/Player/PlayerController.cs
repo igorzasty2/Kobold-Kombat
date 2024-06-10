@@ -6,25 +6,27 @@ public class PlayerControl : MonoBehaviour
 {
     public static PlayerControl Instance { get; private set; }
     [SerializeField] Transform spellPoint;
-    public float speed;
+    [SerializeField] public float speed;
+    [SerializeField] public int health;
     Rigidbody2D playerbody;
     private bool isFacingRight = true;
     public Animator animator;
-    public float attackRate = 2f;
+    [SerializeField] private float attackRate = 2f;
     float nextAttackTime = 0f;
     bool windBallPlaced = false;
 
-    public GameObject windBallPrefab;
-    public GameObject windSpellPrefab;
-    public GameObject iceProjectilePrefab;
+    [SerializeField] public GameObject windBallPrefab;
+    [SerializeField] public GameObject windSpellPrefab;
+    [SerializeField] public GameObject iceProjectilePrefab;
     private GameObject currentWindBall;
-    public GameObject slashPrefab;
-    public GameObject bigSlashPrefab;
+    [SerializeField] public GameObject slashPrefab;
+    [SerializeField] public GameObject bigSlashPrefab;
 
     private float runTime;
     private float finalSpeed;
     private bool isRunning = false;
     private bool canMove = true;
+    private bool canAttack = true;
     private int comboStep = 0;
     private float comboTimer = 0f;
 
@@ -44,7 +46,7 @@ public class PlayerControl : MonoBehaviour
             Move();
         }
 
-        if (Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime && canAttack)
         {
             if (Input.GetButtonDown("AttackBasic"))
             {
@@ -97,6 +99,30 @@ public class PlayerControl : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+    public void Damage(int damage)
+    {
+        health -= damage;
+        
+        if (health > 0)
+        {
+            print("trafiony");
+            animator.SetTrigger("Hurt");
+            canMove = false;
+            canAttack = false;
+        }
+        else
+        {
+            animator.SetTrigger("Dead");
+            canMove = false;
+            canAttack = false;
+        }
+
+    }
+    void NoHurtie()
+    {
+        canMove = true;
+        canAttack = true;
     }
     void AttackBasic()
     {

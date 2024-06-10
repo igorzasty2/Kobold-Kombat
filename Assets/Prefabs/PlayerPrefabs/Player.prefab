@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spellPoint: {fileID: 5207406907513329874}
   speed: 4
+  health: 100
   animator: {fileID: 2167871049824992637}
   attackRate: 2
   windBallPrefab: {fileID: 9040407545861115548, guid: fbc3da52b7f47da488f189b505e70b93, type: 3}

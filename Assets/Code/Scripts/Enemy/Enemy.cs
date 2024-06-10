@@ -14,8 +14,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float attackCooldownMax;
     [SerializeField] protected EnemyVisual enemyVisual;
     [SerializeField] float knockBackForce;
-    [SerializeField] protected float health;
-    [SerializeField] float damage;
+    [SerializeField] protected int health;
     [SerializeField] bool canNotBeStunned;
     [SerializeField] float timeToDestroyObjectAfterDeath;
     protected Transform playerTransform;
@@ -214,7 +213,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject, timeToDestroyObjectAfterDeath);
     }
-    public virtual void Damage(float damage)
+    public virtual void Damage(int damage)
     {
         if (state != State.Dead)
         {
