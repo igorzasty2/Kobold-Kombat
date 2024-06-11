@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int health;
     [SerializeField] bool canNotBeStunned;
     [SerializeField] float timeToDestroyObjectAfterDeath;
+    float callOutRange = 2f;
     protected Transform playerTransform;
     protected Rigidbody2D enemyRigidbody;
     protected DamageDisplay damageDisplay;
@@ -76,6 +77,7 @@ public class Enemy : MonoBehaviour
                 if (DetectPlayer())
                 {
                     state = State.Chasing;
+                    CallOutEnemies();
                 }
                 break;
             case State.Chasing:
@@ -145,9 +147,12 @@ public class Enemy : MonoBehaviour
             case State.Hurt:
                 if(isHurtAnimationFinished)
                 {
+                        state = State.Chasing;
+                        CallOutEnemies();
+                        /*
                         if (IsPlayerInRange(attackRange))
                         {
-                            state = State.Chasing;
+                            state = State.Attacking;
                         }
                         else if (IsPlayerInRange(focusRange))
                         {
@@ -157,6 +162,7 @@ public class Enemy : MonoBehaviour
                         {
                             state = State.Idle;
                         }
+                        */
                 }
                 break;
         }
@@ -166,6 +172,40 @@ public class Enemy : MonoBehaviour
             if(state != State.Chasing)
             {
                 enemyRigidbody.velocity = Vector2.zero;
+            }
+        }
+    }
+    private void CallOutEnemies()
+    {
+        List<GameObject> objectsInLayer = new List<GameObject>();
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.layer == gameObject.layer && obj != gameObject)
+            {
+                objectsInLayer.Add(obj);
+            }
+        }
+        foreach (GameObject obj in objectsInLayer)
+        {
+            if(Vector2.Distance(obj.transform.position, transform.position) <= callOutRange)
+            {
+                Enemy enemy = obj.GetComponent<Enemy>();
+                if(enemy != null)
+                {
+                    enemy.StartChasing();
+                }
+            }
+        }
+    }
+    public void StartChasing()
+    {
+        if(state == State.Idle)
+        {
+            if(IsPlayerInRange(focusRange))
+            {
+                state = State.Chasing;
+                EnemyStateChanged(new OnStateChangedEventArgs(state));
             }
         }
     }
@@ -230,6 +270,9 @@ public class Enemy : MonoBehaviour
                 if (canNotBeStunned)
                 {
                     OnStateChanged?.Invoke(this, new OnStateChangedEventArgs(State.Hurt));
+                    state = State.Chasing;
+                    CallOutEnemies();
+                    EnemyStateChanged(new OnStateChangedEventArgs(state));
                 }
                 else
                 {
