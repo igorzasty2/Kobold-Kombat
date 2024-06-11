@@ -10,6 +10,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] public int maxHealth;
     private int health;
     Rigidbody2D playerbody;
+    Collider2D playerCollider;
     DamageDisplay damageDisplay;
     private bool isFacingRight = true;
     public Animator animator;
@@ -41,6 +42,7 @@ public class PlayerControl : MonoBehaviour
         health = maxHealth;
         playerbody = GetComponent<Rigidbody2D>();
         damageDisplay = FindObjectOfType<DamageDisplay>();
+        playerCollider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -117,10 +119,13 @@ public class PlayerControl : MonoBehaviour
             animator.SetTrigger("Hurt");
             canMove = false;
             canAttack = false;
+            runTime = Time.time;
+            finalSpeed = speed;
         }
         else
         {
             animator.SetTrigger("Dead");
+            playerCollider.enabled = false;
             canMove = false;
             canAttack = false;
         }
