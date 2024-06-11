@@ -63,7 +63,6 @@ MonoBehaviour:
   enemyVisual: {fileID: 6575910948808436755}
   knockBackForce: 10
   health: 100
-  damage: 30
   canNotBeStunned: 0
   timeToDestroyObjectAfterDeath: 1
   distanceProjectileFromEnemy: 0.4

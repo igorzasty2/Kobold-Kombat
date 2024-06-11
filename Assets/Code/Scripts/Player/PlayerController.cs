@@ -7,8 +7,11 @@ public class PlayerControl : MonoBehaviour
     public static PlayerControl Instance { get; private set; }
     [SerializeField] Transform spellPoint;
     [SerializeField] public float speed;
-    [SerializeField] public int health;
+    [SerializeField] public int maxHealth;
+    private int health;
     Rigidbody2D playerbody;
+    Collider2D playerCollider;
+    DamageDisplay damageDisplay;
     private bool isFacingRight = true;
     public Animator animator;
     [SerializeField] private float attackRate = 2f;
@@ -36,7 +39,10 @@ public class PlayerControl : MonoBehaviour
     }
     void Start()
     {
+        health = maxHealth;
         playerbody = GetComponent<Rigidbody2D>();
+        damageDisplay = FindObjectOfType<DamageDisplay>();
+        playerCollider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -103,17 +109,23 @@ public class PlayerControl : MonoBehaviour
     public void Damage(int damage)
     {
         health -= damage;
-        
+        if (damageDisplay != null)
+        {
+            damageDisplay.ShowDamage(transform.position, damage);
+            damageDisplay.UpdateHealth(health, maxHealth);
+        }
         if (health > 0)
         {
-            print("trafiony");
             animator.SetTrigger("Hurt");
             canMove = false;
             canAttack = false;
+            runTime = Time.time;
+            finalSpeed = speed;
         }
         else
         {
             animator.SetTrigger("Dead");
+            playerCollider.enabled = false;
             canMove = false;
             canAttack = false;
         }
@@ -185,6 +197,12 @@ public class PlayerControl : MonoBehaviour
             windBallPlaced = false;
             nextAttackTime = Time.time + 1f / attackRate;
         }
+    }
+    void Dash()
+    {
+        //animator.SetTrigger("Attack");
+        // = false;
+
     }
     public Transform GetPlayerTransform()
     {
