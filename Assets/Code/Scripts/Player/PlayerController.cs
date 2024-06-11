@@ -198,6 +198,12 @@ public class PlayerControl : MonoBehaviour
             nextAttackTime = Time.time + 1f / attackRate;
         }
     }
+    void Dash()
+    {
+        //animator.SetTrigger("Attack");
+        // = false;
+
+    }
     public Transform GetPlayerTransform()
     {
         return transform;
