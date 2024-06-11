@@ -10,9 +10,9 @@ public class Room : MonoBehaviour
     [SerializeField] LayerMask playerLayerMask;
     [SerializeField] GameObject gateGameObject;
     [SerializeField] float timeBetweenWaves;
-    int percentOfChanceEmpty = 20;
-    int percentOfChanceRegular = 40;
-    int percentOfChanceArena = 40;
+    [SerializeField] int percentOfChanceEmpty = 20;
+    [SerializeField] int percentOfChanceRegular = 40;
+    [SerializeField] int percentOfChanceArena = 40;
     float timerBetweenWaves;
     bool isArena;
     bool allEnemiesDefeated;
