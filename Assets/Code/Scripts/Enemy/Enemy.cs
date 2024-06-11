@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float timeToDestroyObjectAfterDeath;
     protected Transform playerTransform;
     protected Rigidbody2D enemyRigidbody;
+    protected DamageDisplay damageDisplay;
     Collider2D enemyCollider;
     protected float attackCooldown;
     bool isAttackAnimationFinished;
@@ -47,6 +48,7 @@ public class Enemy : MonoBehaviour
     {
         enemyRigidbody = GetComponent<Rigidbody2D>();
         enemyCollider = GetComponent<Collider2D>();
+        damageDisplay = FindObjectOfType<DamageDisplay>();
         state = State.Idle;
     }
     protected virtual void Start()
@@ -219,7 +221,11 @@ public class Enemy : MonoBehaviour
         {
             enemyRigidbody.velocity = Vector2.zero;
             health -= damage;
-            if(health > 0)
+            if(damageDisplay != null)
+            {
+                damageDisplay.ShowDamage(transform.position, damage);
+            }
+            if (health > 0)
             {
                 if (canNotBeStunned)
                 {

@@ -7,8 +7,10 @@ public class PlayerControl : MonoBehaviour
     public static PlayerControl Instance { get; private set; }
     [SerializeField] Transform spellPoint;
     [SerializeField] public float speed;
-    [SerializeField] public int health;
+    [SerializeField] public int maxHealth;
+    private int health;
     Rigidbody2D playerbody;
+    DamageDisplay damageDisplay;
     private bool isFacingRight = true;
     public Animator animator;
     [SerializeField] private float attackRate = 2f;
@@ -36,7 +38,9 @@ public class PlayerControl : MonoBehaviour
     }
     void Start()
     {
+        health = maxHealth;
         playerbody = GetComponent<Rigidbody2D>();
+        damageDisplay = FindObjectOfType<DamageDisplay>();
     }
 
     void Update()
@@ -103,10 +107,13 @@ public class PlayerControl : MonoBehaviour
     public void Damage(int damage)
     {
         health -= damage;
-        
+        if (damageDisplay != null)
+        {
+            damageDisplay.ShowDamage(transform.position, damage);
+            damageDisplay.UpdateHealth(health, maxHealth);
+        }
         if (health > 0)
         {
-            print("trafiony");
             animator.SetTrigger("Hurt");
             canMove = false;
             canAttack = false;
