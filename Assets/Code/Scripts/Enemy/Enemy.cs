@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int health;
     [SerializeField] bool canNotBeStunned;
     [SerializeField] float timeToDestroyObjectAfterDeath;
+    Pathfinding pathfinding;
     float callOutRange = 2f;
     protected Transform playerTransform;
     protected Rigidbody2D enemyRigidbody;
@@ -47,6 +48,11 @@ public class Enemy : MonoBehaviour
     }
     private void Awake()
     {
+        pathfinding = GetComponent<Pathfinding>();
+        if(pathfinding != null)
+        {
+            Debug.Log("Nie jest null");
+        }
         enemyRigidbody = GetComponent<Rigidbody2D>();
         enemyCollider = GetComponent<Collider2D>();
         damageDisplay = FindObjectOfType<DamageDisplay>();
@@ -236,8 +242,7 @@ public class Enemy : MonoBehaviour
     }
     private void MoveToPlayer()
     {
-        Vector2 velocity = playerTransform.position - transform.position;
-        enemyRigidbody.velocity = velocity.normalized * movementSpeed;
+        pathfinding.FollowPath(movementSpeed);
     }
     protected virtual void Attack()
     {

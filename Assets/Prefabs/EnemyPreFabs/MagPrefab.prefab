@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2209788790886998753}
   - component: {fileID: 6060137194635722757}
+  - component: {fileID: 1446982427445833032}
   - component: {fileID: 7169001719873387824}
   - component: {fileID: 5818789582642428286}
   - component: {fileID: 451834971884669896}
@@ -183,12 +184,23 @@ MonoBehaviour:
   enemyVisual: {fileID: 4686747828088239241}
   knockBackForce: 10
   health: 100
-  damage: 30
   canNotBeStunned: 0
   timeToDestroyObjectAfterDeath: 1
   distanceSpellShotFromEnemy: 1.5
   angleBetweenSpellShots: 30
   spellShot: {fileID: 9040407545861115548, guid: 1032bf08917abd041b58be97905a5c11, type: 3}
+--- !u!114 &1446982427445833032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220496839414000713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb600a94f972d14793ac6f14950edb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7169001719873387824
 Rigidbody2D:
   serializedVersion: 4

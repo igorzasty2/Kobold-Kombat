@@ -6772,7 +6772,7 @@ GameObject:
   - component: {fileID: 8528586699404997892}
   - component: {fileID: 5319212834381128217}
   - component: {fileID: 6777869321853044012}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Abyss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

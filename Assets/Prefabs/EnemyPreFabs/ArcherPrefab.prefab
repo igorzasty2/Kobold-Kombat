@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2461382232583222764}
   - component: {fileID: 3640375627985005411}
+  - component: {fileID: 7261620147635524045}
   - component: {fileID: 9040974352053706706}
   - component: {fileID: 4483556419130928217}
   - component: {fileID: 3386674334596596447}
@@ -68,6 +69,18 @@ MonoBehaviour:
   distanceProjectileFromEnemy: 0.4
   projectile: {fileID: 1225072991116306261, guid: af2d916a4871f2c4d93fe8689e482238, type: 3}
   ray: {fileID: 6004181855176623440}
+--- !u!114 &7261620147635524045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903962305384646341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb600a94f972d14793ac6f14950edb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &9040974352053706706
 Rigidbody2D:
   serializedVersion: 4

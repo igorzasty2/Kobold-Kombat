@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4407342828749299286}
   - component: {fileID: 9028519524768701682}
+  - component: {fileID: 8415306443865052830}
   - component: {fileID: 6698217893577095497}
   - component: {fileID: 6831282106354442758}
   - component: {fileID: 5460221766069322957}
@@ -72,6 +73,18 @@ MonoBehaviour:
   dashSpeed: 5
   staggerableTimerMax: 0.5
   staggerableWhileHittingTimerMax: 3
+--- !u!114 &8415306443865052830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3366912172800325129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb600a94f972d14793ac6f14950edb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &6698217893577095497
 Rigidbody2D:
   serializedVersion: 4
