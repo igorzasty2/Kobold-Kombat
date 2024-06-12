@@ -88,7 +88,14 @@ public class Enemy : MonoBehaviour
                 else if (IsPlayerInRange(attackRange) && CanLookAtPlayer())
                 {
                     state = State.Cooldown;
-                    attackCooldown = attackCooldownMax;
+                    if(this is Mag)
+                    {
+                        attackCooldown = 0f;
+                    }
+                    else
+                    {
+                        attackCooldown = attackCooldownMax;
+                    }
                 }
                 break;
             case State.Cooldown:
@@ -255,7 +262,7 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject, timeToDestroyObjectAfterDeath);
     }
-    public virtual void Damage(int damage)
+    public virtual void Damage(int damage, Vector3 origin, bool isMelee)
     {
         if (state != State.Dead)
         {
@@ -291,13 +298,20 @@ public class Enemy : MonoBehaviour
             }
             if(!canNotBeStunned)
             {
-                KnockBack();
+                KnockBack(origin, isMelee);
             }
         }
     }
-    private void KnockBack()
+    private void KnockBack(Vector3 origin, bool isMelee)
     {
-        Vector2 forceVector = (transform.position - playerTransform.position).normalized * knockBackForce;
+        Vector2 forceVector;
+        if (isMelee)
+        {
+            forceVector = (transform.position - playerTransform.position).normalized * knockBackForce;
+        }
+        else {
+            forceVector = (transform.position - origin).normalized * knockBackForce;
+        }
         enemyRigidbody.AddForce(forceVector, ForceMode2D.Impulse);
     }
     public  Vector2 GetLookingDirecton()

@@ -18,7 +18,7 @@ public class EndScreen : MonoBehaviour
         gameManager.FinishLevel();
         EndScreenUI.SetActive(true);
         StatsScores.text = Mathf.Round((Time.time - gameManager.floorTime) * 100f) * 0.01f + "s\n" + Mathf.Round(gameManager.runTime*100f)*0.01f + "s\n" + GameManager.killedEnemies + "\n" + GameManager.damageDealt + "\n" + GameManager.damageTaken;
-        FinishText.text = "Floor " + gameManager.currentFloor;
+        FinishText.text = "Floor " + GameManager.currentFloor;
         if (isSuccess)
         {
             FinishText.text += " Finished";
@@ -30,11 +30,11 @@ public class EndScreen : MonoBehaviour
             FinishText.text += " Failed";
             continueButton.SetActive(false);
             quitButton.SetActive(true);
-            Destroy(gameManager);
         }
     }
     public void Menu()
     {
+        Destroy(gameManager);
         StartCoroutine(Anim(0));
     }
     public IEnumerator Anim(int scene)
@@ -46,7 +46,7 @@ public class EndScreen : MonoBehaviour
     public void Continue()
     {
         Time.timeScale = 1f;
-        StartCoroutine(Anim((gameManager.currentFloor%2)+1));
         gameManager.NextLevel();
+        StartCoroutine(Anim(((GameManager.currentFloor+1)%2)+1));
     }
 }

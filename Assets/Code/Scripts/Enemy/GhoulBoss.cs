@@ -233,7 +233,7 @@ public class GhoulBoss : MeleeEnemy
         canDashSecondTime = false;
     }
 
-    public override void Damage(int damage)
+    public override void Damage(int damage, Vector3 origin, bool isMelee)
     {
         if(unstaggerable)
         {
@@ -252,7 +252,7 @@ public class GhoulBoss : MeleeEnemy
         canDashSecondTime = false;
         attackVariant = GhoulAttackVariant.Basic;
         ghoulBossState = GhoulBossState.None;
-        base.Damage(damage);
+        base.Damage(damage, origin, isMelee);
     }
     protected override void Attack()
     {

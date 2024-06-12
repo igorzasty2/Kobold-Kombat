@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class SpellProjectile : MonoBehaviour
 {
-    LayerMask hitLayerMask;
-    LayerMask wallLayerMask;
     [SerializeField] float speed;
     [SerializeField] int damage;
+    [SerializeField] bool isMelee;
     Vector2 startPosition;
     Vector2 lookingDirection;
     bool crossedMaxDistance;
@@ -20,8 +19,6 @@ public class SpellProjectile : MonoBehaviour
         projectileRigidBody = GetComponent<Rigidbody2D>();
         projectileCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
-        hitLayerMask = GetLayerMask(7);
-        wallLayerMask = GetLayerMask(3);
         startPosition = transform.position;
         crossedMaxDistance = false;
         float angleInDegrees = transform.eulerAngles.z;
@@ -48,24 +45,19 @@ public class SpellProjectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        LayerMask colliderLayerMask = GetLayerMask(collision.gameObject.layer);
-        if (colliderLayerMask == hitLayerMask)
+        if (collision.gameObject.layer == 7)
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy != null)
             {
-                enemy.Damage(damage);
+                enemy.Damage(damage, transform.position, isMelee);
             }
             ProjectileFinish();
         }
-        else if (colliderLayerMask == wallLayerMask)
+        else if (collision.gameObject.layer == 3)
         {
             ProjectileFinish();
         }
-    }
-    private LayerMask GetLayerMask(int layer)
-    {
-        return LayerMask.GetMask(LayerMask.LayerToName(layer));
     }
     private void ProjectileFinish()
     {

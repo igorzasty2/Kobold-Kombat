@@ -302,10 +302,10 @@ RectTransform:
   - {fileID: 5788919841891406607}
   m_Father: {fileID: 553390752649509175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2222244560806019548
 MonoBehaviour:
@@ -450,10 +450,10 @@ RectTransform:
   - {fileID: 3338535143403769106}
   m_Father: {fileID: 553390752649509175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1874542443021335783
 GameObject:
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -592,8 +592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: -35.9339}
-  m_SizeDelta: {x: 1112.264, y: 286.0922}
+  m_AnchoredPosition: {x: -4.2, y: -47}
+  m_SizeDelta: {x: 712.2811, y: 226.0009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8766211059505810438
 CanvasRenderer:
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stworzono przez: Igor Osiakowski i Piotr Sobu\u015B\nAssety:\nhttps://www.patreon.com/posts/kobold-priest-71688221\r\nhttps://www.patreon.com/posts/ghoul-sprites-38431690\r\nhttps://www.patreon.com/posts/twig-blight-47857468\r\nhttps://www.patreon.com/posts/minotaur-sprites-22942792\r\nhttps://www.patreon.com/posts/ratfolk-mage-62105865\r\nhttps://www.patreon.com/posts/adventurer-21724834\r\n\r\nhttps://szadiart.itch.io/rogue-fantasy-catacombs\r\nhttps://pimen.itch.io/smoke-vfx-1\r\nhttps://pimen.itch.io/ice-spell-effect-01\r\nhttps://sangoro.itch.io/attack-vfx\r\nhttps://fontstruct.com/fontstructions/show/1535121/hachicro-undertale-battle-font"
+  m_text: "Stworzono przez: Igor Osiakowski i Piotr Sobu\u015B\nAssety:\nhttps://www.patreon.com/posts/kobold-priest-71688221\r\nhttps://www.patreon.com/posts/ghoul-sprites-38431690\r\nhttps://www.patreon.com/posts/twig-blight-47857468\r\nhttps://www.patreon.com/posts/minotaur-sprites-22942792\r\nhttps://www.patreon.com/posts/ratfolk-mage-62105865\r\nhttps://www.patreon.com/posts/adventurer-21724834\r\n\rhttps://kenam0.itch.io/arrows-pack\nhttps://nyknck.itch.io/fireball-animation\nhttps://szadiart.itch.io/rogue-fantasy-catacombs\r\nhttps://pimen.itch.io/smoke-vfx-1\r\nhttps://pimen.itch.io/ice-spell-effect-01\r\nhttps://sangoro.itch.io/attack-vfx\r\nhttps://fontstruct.com/fontstructions/show/1535121/hachicro-undertale-battle-font"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -650,11 +650,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 12
   m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -728,7 +728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -180}
+  m_AnchoredPosition: {x: 0.000015259, y: -167.87}
   m_SizeDelta: {x: 180, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6339905036293933962
@@ -860,7 +860,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1133.75, y: 549.62}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6994052687654623456
 CanvasRenderer:
@@ -936,8 +936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -262}
-  m_SizeDelta: {x: 180, y: 80}
+  m_AnchoredPosition: {x: 0.000015259, y: -172.03}
+  m_SizeDelta: {x: 129.2979, y: 46.1986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4813708783691473200
 CanvasRenderer:
@@ -1081,7 +1081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 17.5}
   m_SizeDelta: {x: 180, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1207220816408539935
@@ -1212,7 +1212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 197}
+  m_AnchoredPosition: {x: -0.00001955, y: 109.6}
   m_SizeDelta: {x: 488.8668, y: 158.8365}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7107009064610811911
@@ -1270,8 +1270,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71
-  m_fontSizeBase: 71
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1482,7 +1482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
+  m_AnchoredPosition: {x: 0, y: -73.2}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &589997618721868720
@@ -1817,8 +1817,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1893,8 +1893,8 @@ RectTransform:
   - {fileID: 236120621903161870}
   m_Father: {fileID: 5683820087528356917}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

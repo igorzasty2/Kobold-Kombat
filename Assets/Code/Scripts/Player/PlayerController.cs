@@ -43,6 +43,7 @@ public class PlayerControl : MonoBehaviour
         playerbody = GetComponent<Rigidbody2D>();
         damageDisplay = FindObjectOfType<DamageDisplay>();
         playerCollider = GetComponent<Collider2D>();
+        if (GameManager.health <= 0) GameManager.health = maxHealth;
         damageDisplay.UpdateHealth(GameManager.health, maxHealth);
     }
 
@@ -164,6 +165,12 @@ public class PlayerControl : MonoBehaviour
 
         animator.SetTrigger("Attack");
         canMove = false;
+    }
+    protected Vector3 GetRotatedVector(Vector3 vector, float angle)
+    {
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        Vector3 rotatedVector = rotation * vector;
+        return rotatedVector;
     }
     void AttackSpecial1()
     {

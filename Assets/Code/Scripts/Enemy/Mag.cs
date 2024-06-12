@@ -1,8 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
-using static UnityEngine.GraphicsBuffer;
 
 public class Mag : Enemy
 {

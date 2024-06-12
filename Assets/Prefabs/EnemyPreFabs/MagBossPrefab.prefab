@@ -58,7 +58,7 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  attackCooldownMax: 1
+  attackCooldownMax: 3
   enemyVisual: {fileID: 1094963408445543548}
   knockBackForce: 0
   health: 100
