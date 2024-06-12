@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4579709812854120180}
   - component: {fileID: 3162007088568692132}
-  - component: {fileID: 5796005447400118804}
   - component: {fileID: 7425245127391398641}
   - component: {fileID: 7691932622664327497}
   - component: {fileID: 4074167075554872551}
@@ -69,18 +68,6 @@ MonoBehaviour:
   radiusOfHitbox: 1
   damage: 30
   dashSpeed: 20
---- !u!114 &5796005447400118804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321837451879600675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb600a94f972d14793ac6f14950edb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7425245127391398641
 Rigidbody2D:
   serializedVersion: 4

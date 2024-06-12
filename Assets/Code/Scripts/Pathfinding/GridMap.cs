@@ -42,7 +42,7 @@ public class GridMap : MonoBehaviour
             for (int y = 0; y < gridSizeY; y++)
             {
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
-                bool walkable = !(Physics2D.OverlapCircle(worldPoint, nodeRadius, unwalkableMask));
+                bool walkable = !Physics2D.OverlapArea((Vector2)worldPoint - Vector2.one * nodeRadius, (Vector2)worldPoint + Vector2.one * nodeRadius);
                 grid[x, y] = new Node(walkable, worldPoint, x, y);
             }
         }
@@ -50,13 +50,18 @@ public class GridMap : MonoBehaviour
 
     public Node NodeFromWorldPoint(Vector3 worldPosition)
     {
+        // Zamień współrzędne światowe na procentowe
         float percentX = (worldPosition.x + gridWorldSize.x / 2) / gridWorldSize.x;
         float percentY = (worldPosition.y + gridWorldSize.y / 2) / gridWorldSize.y;
+
+        // Upewnij się, że wartości są między 0 a 1
         percentX = Mathf.Clamp01(percentX);
         percentY = Mathf.Clamp01(percentY);
 
-        int x = Mathf.RoundToInt((gridSizeX - 1) * percentX);
-        int y = Mathf.RoundToInt((gridSizeY - 1) * percentY);
+        // Oblicz indeksy w siatce
+        int x = Mathf.FloorToInt((gridSizeX) * percentX);
+        int y = Mathf.FloorToInt((gridSizeY) * percentY);
+
         return grid[x, y];
     }
 
@@ -89,14 +94,14 @@ public class GridMap : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, gridWorldSize.y, 1));
+        Gizmos.DrawWireCube(transform.position, new Vector2(gridWorldSize.x, gridWorldSize.y));
 
         if (grid != null && displayGridGizmos)
         {
             foreach (Node n in grid)
             {
                 Gizmos.color = (n.walkable) ? Color.white : Color.red;
-                Gizmos.DrawCube(n.worldPosition, Vector3.one * (nodeDiameter - .1f));
+                Gizmos.DrawWireCube(n.worldPosition, Vector2.one * nodeDiameter);
             }
         }
     }

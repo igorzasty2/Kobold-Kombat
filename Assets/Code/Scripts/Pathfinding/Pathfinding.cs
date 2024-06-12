@@ -86,7 +86,20 @@ public class Pathfinding : MonoBehaviour
         currentIndex = 0;
         currentPath = path;
     }
-
+    private void OnDrawGizmos()
+    {
+        if(currentPath != null)
+        {
+            if(currentPath.Count > 0)
+            {
+                Gizmos.DrawLine(transform.position, currentPath[0].worldPosition);
+                for (int i = 0; i < currentPath.Count - 1; i++)
+                {
+                    Gizmos.DrawLine(currentPath[i].worldPosition, currentPath[i + 1].worldPosition);
+                }
+            }
+        }
+    }
     public void FollowPath(float speed)
     {
         if(currentPath != null)

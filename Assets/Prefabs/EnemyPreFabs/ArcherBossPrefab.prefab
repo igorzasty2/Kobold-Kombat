@@ -185,7 +185,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7877158166862861396}
   - component: {fileID: 6112647056652743542}
-  - component: {fileID: 4348811394850343077}
   - component: {fileID: 5108493140707373262}
   - component: {fileID: 8800695449686823379}
   - component: {fileID: 5218186447559841454}
@@ -248,18 +247,6 @@ MonoBehaviour:
   basicRayObject: {fileID: 1721306539484815285, guid: 2b33b6837f720d442921b26dab7e3329, type: 3}
   angleBeetwenRays: 20
   rayLength: 15
---- !u!114 &4348811394850343077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2790751840816509851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb600a94f972d14793ac6f14950edb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &5108493140707373262
 Rigidbody2D:
   serializedVersion: 4
