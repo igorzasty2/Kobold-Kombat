@@ -61,12 +61,12 @@ MonoBehaviour:
   attackCooldownMax: 1
   enemyVisual: {fileID: 2165857509438213946}
   knockBackForce: 0
-  health: 500
+  health: 80
   canNotBeStunned: 1
   timeToDestroyObjectAfterDeath: 1
   distanceHitboxFromEnemy: 1
   radiusOfHitbox: 1
-  damage: 30
+  damage: 20
   dashSpeed: 20
 --- !u!50 &7425245127391398641
 Rigidbody2D:

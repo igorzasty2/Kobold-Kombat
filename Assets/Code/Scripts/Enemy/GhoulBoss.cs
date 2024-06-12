@@ -239,7 +239,12 @@ public class GhoulBoss : MeleeEnemy
         {
             if(health - damage > 0)
             {
+                GameManager.damageDealt += damage;
                 health -= damage;
+                if (damageDisplay != null)
+                {
+                    damageDisplay.ShowDamage(transform.position, damage);
+                }
                 EnemyStateChanged(new GhoulOnStateChangedEventArgs(state, GhoulBossState.Hurt));
                 return;
             }

@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5700334247804865731}
   - component: {fileID: -8868143178342624186}
+  - component: {fileID: 1913085763248392620}
   - component: {fileID: 6162005445588277289}
   - component: {fileID: 3853616155243950127}
   - component: {fileID: 1865175356892847582}
@@ -182,12 +183,24 @@ MonoBehaviour:
   attackCooldownMax: 1.5
   enemyVisual: {fileID: 5686196533833610702}
   knockBackForce: 10
-  health: 100
+  health: 60
   canNotBeStunned: 0
   timeToDestroyObjectAfterDeath: 1
   distanceHitboxFromEnemy: 1
   radiusOfHitbox: 1
-  damage: 15
+  damage: 10
+--- !u!114 &1913085763248392620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705486000728223296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb600a94f972d14793ac6f14950edb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &6162005445588277289
 Rigidbody2D:
   serializedVersion: 4

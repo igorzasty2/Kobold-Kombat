@@ -8,7 +8,6 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] Transform spellPoint;
     [SerializeField] public float speed;
     [SerializeField] public int maxHealth;
-    private int health;
     Rigidbody2D playerbody;
     Collider2D playerCollider;
     DamageDisplay damageDisplay;
@@ -17,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float attackRate = 2f;
     float nextAttackTime = 0f;
     bool windBallPlaced = false;
+    [SerializeField] EndScreen endScreen;
 
     [SerializeField] public GameObject windBallPrefab;
     [SerializeField] public GameObject windSpellPrefab;
@@ -24,6 +24,7 @@ public class PlayerControl : MonoBehaviour
     private GameObject currentWindBall;
     [SerializeField] public GameObject slashPrefab;
     [SerializeField] public GameObject bigSlashPrefab;
+
 
     private float runTime;
     private float finalSpeed;
@@ -39,10 +40,10 @@ public class PlayerControl : MonoBehaviour
     }
     void Start()
     {
-        health = maxHealth;
         playerbody = GetComponent<Rigidbody2D>();
         damageDisplay = FindObjectOfType<DamageDisplay>();
         playerCollider = GetComponent<Collider2D>();
+        damageDisplay.UpdateHealth(GameManager.health, maxHealth);
     }
 
     void Update()
@@ -108,13 +109,14 @@ public class PlayerControl : MonoBehaviour
     }
     public void Damage(int damage)
     {
-        health -= damage;
+        GameManager.health -= damage;
+        GameManager.damageTaken += damage;
         if (damageDisplay != null)
         {
             damageDisplay.ShowDamage(transform.position, damage);
-            damageDisplay.UpdateHealth(health, maxHealth);
+            damageDisplay.UpdateHealth(GameManager.health, maxHealth);
         }
-        if (health > 0)
+        if (GameManager.health > 0)
         {
             animator.SetTrigger("Hurt");
             canMove = false;
@@ -124,6 +126,7 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
+            endScreen.FinishLevel(false);
             animator.SetTrigger("Dead");
             playerCollider.enabled = false;
             canMove = false;
