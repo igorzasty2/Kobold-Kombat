@@ -278,9 +278,13 @@ public class Enemy : MonoBehaviour
                 if (canNotBeStunned)
                 {
                     OnStateChanged?.Invoke(this, new OnStateChangedEventArgs(State.Hurt));
-                    state = State.Chasing;
+                    if(state != State.Attacking)
+                    {
+                        state = State.Chasing;
+
+                        EnemyStateChanged(new OnStateChangedEventArgs(state));
+                    }
                     CallOutEnemies();
-                    EnemyStateChanged(new OnStateChangedEventArgs(state));
                 }
                 else
                 {

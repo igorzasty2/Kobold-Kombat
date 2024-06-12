@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static int currentFloor = 1;
     public float floorTime;
-    public float runTime = 0;
+    public static float runTime = 0;
     public static int killedEnemies = 0;
     public static int damageDealt = 0;
     public static int damageTaken = 0;
@@ -28,11 +28,16 @@ public class GameManager : MonoBehaviour
     }
     public void FinishLevel()
     {
-        runTime += Time.time - floorTime;
+        runTime += (Time.time - floorTime);
     }
     public void NextLevel()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
         currentFloor += 1;
         floorTime = Time.time;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

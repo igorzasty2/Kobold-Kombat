@@ -236,7 +236,7 @@ MonoBehaviour:
     m_Bits: 64
   attackCooldownMax: 1
   enemyVisual: {fileID: 7623896193436493752}
-  knockBackForce: 10
+  knockBackForce: 0
   health: 100
   canNotBeStunned: 0
   timeToDestroyObjectAfterDeath: 1
