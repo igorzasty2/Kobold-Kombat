@@ -70,7 +70,6 @@ public class Room : MonoBehaviour
         if (isArena)
         {
             wave = patrol.GetChildren();
-            Debug.Log(wave.Count);
         }
         patrol.UnSetChildObjectsParent();
     }

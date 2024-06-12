@@ -53,7 +53,7 @@ MonoBehaviour:
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  speed: 5
+  speed: 8
   projectileVisual: {fileID: 1070866856383764578}
   damage: 7
 --- !u!50 &7204775713894851641

@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
     public int currentFloor = 1;
     public float floorTime;
     public float runTime = 0;
-    public int killedEnemies = 0;
-    public int damageDealt = 0;
-    public int damageTaken = 0;
-
+    public static int killedEnemies = 0;
+    public static int damageDealt = 0;
+    public static int damageTaken = 0;
+    public static int health = 300;
     private void Awake()
     {
         floorTime = Time.time;
@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     }
     public void FinishLevel()
     {
-        
         runTime += Time.time - floorTime;
     }
     public void NextLevel()

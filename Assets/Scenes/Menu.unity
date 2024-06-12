@@ -291,6 +291,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 903614905141072270, guid: ef729efe4193cf04ca640958a248b940, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1874542443021335783, guid: ef729efe4193cf04ca640958a248b940, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -379,6 +383,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 936770960}
+    - target: {fileID: 7732003891541089588, guid: ef729efe4193cf04ca640958a248b940, type: 3}
+      propertyPath: m_text
+      value: "Stworzono przez: Igor Osiakowski i Piotr Sobu\u015B\nAssety:\nhttps://www.patreon.com/posts/kobold-priest-71688221\r\nhttps://www.patreon.com/posts/ghoul-sprites-38431690\r\nhttps://www.patreon.com/posts/twig-blight-47857468\r\nhttps://www.patreon.com/posts/minotaur-sprites-22942792\r\nhttps://www.patreon.com/posts/ratfolk-mage-62105865\r\nhttps://www.patreon.com/posts/adventurer-21724834\r\nhttps://nyknck.itch.io/fireball-animation\n\rhttps://kenam0.itch.io/arrows-pack\nhttps://szadiart.itch.io/rogue-fantasy-catacombs\r\nhttps://pimen.itch.io/smoke-vfx-1\r\nhttps://pimen.itch.io/ice-spell-effect-01\r\nhttps://sangoro.itch.io/attack-vfx\r\nhttps://fontstruct.com/fontstructions/show/1535121/hachicro-undertale-battle-font"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -49,10 +49,6 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         pathfinding = GetComponent<Pathfinding>();
-        if(pathfinding != null)
-        {
-            Debug.Log("Nie jest null");
-        }
         enemyRigidbody = GetComponent<Rigidbody2D>();
         enemyCollider = GetComponent<Collider2D>();
         damageDisplay = FindObjectOfType<DamageDisplay>();
@@ -265,6 +261,7 @@ public class Enemy : MonoBehaviour
         if (state != State.Dead)
         {
             enemyRigidbody.velocity = Vector2.zero;
+            GameManager.damageDealt += damage;
             health -= damage;
             if(damageDisplay != null)
             {
@@ -289,6 +286,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 state = State.Dead;
+                GameManager.killedEnemies += 1;
                 enemyCollider.enabled = false;
                 OnStateChanged?.Invoke(this, new OnStateChangedEventArgs(state));
             }

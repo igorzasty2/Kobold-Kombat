@@ -17,7 +17,7 @@ public class EndScreen : MonoBehaviour
     {
         gameManager.FinishLevel();
         EndScreenUI.SetActive(true);
-        StatsScores.text = Mathf.Round((Time.time - gameManager.floorTime) * 100f) * 0.01f + "s\n" + Mathf.Round(gameManager.runTime*100f)*0.01f + "s\n" + gameManager.killedEnemies + "\n" + gameManager.damageDealt + "\n" + gameManager.damageTaken;
+        StatsScores.text = Mathf.Round((Time.time - gameManager.floorTime) * 100f) * 0.01f + "s\n" + Mathf.Round(gameManager.runTime*100f)*0.01f + "s\n" + GameManager.killedEnemies + "\n" + GameManager.damageDealt + "\n" + GameManager.damageTaken;
         FinishText.text = "Floor " + gameManager.currentFloor;
         if (isSuccess)
         {
@@ -46,6 +46,7 @@ public class EndScreen : MonoBehaviour
     public void Continue()
     {
         Time.timeScale = 1f;
-        StartCoroutine(Anim(1));
+        StartCoroutine(Anim((gameManager.currentFloor%2)+1));
+        gameManager.NextLevel();
     }
 }

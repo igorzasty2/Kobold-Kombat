@@ -62,7 +62,7 @@ MonoBehaviour:
   attackCooldownMax: 2
   enemyVisual: {fileID: 8624067341566052977}
   knockBackForce: 0
-  health: 500
+  health: 100
   canNotBeStunned: 0
   timeToDestroyObjectAfterDeath: 1
   distanceHitboxFromEnemy: 1.5
